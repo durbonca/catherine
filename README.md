@@ -1,12 +1,6 @@
-# :wave: Say hi to Elizabeth :wave:
+# Elizabeth Theme 
 
-[![Generic badge](https://img.shields.io/badge/course%20available%3F-yes-green.svg)](https://shields.io/)
-
-This project is created and intended to be used for the [Shopify Theme Development – Online Store 2.0 + TailwindCSS course](https://weeklyhow.com/courses/)
-
-
-[Get the course!](https://weeklyhow.com/) | [Lessons covered](#lessons-covered) |
-[How to use](#how-to-use) | [Not a student?](#not-a-student)
+This project is created and intended to be used for the Shopify Theme Development – Online Store 2.0 + TailwindCSS course
 
 ## Lessons covered
 
@@ -34,7 +28,3 @@ shopify theme init [ NAME OF YOUR THEME ] --clone-url https://github.com/polidar
 ```
 
 If you don't have Shopify CLI installed to your computer, navigate to the [installation page of Shopify CLI](https://shopify.dev/themes/tools/cli/installation).
-
-## Not a student
-
-If you're not a student, you can still use this repository to start a new Shopify theme project. However, any issues that you will encounter throughout your development will not be supported as the instructor will only answer questions through the course's QnA page.

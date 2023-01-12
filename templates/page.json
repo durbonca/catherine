@@ -1,8 +1,18 @@
 {
-    "sections": {
-        "template": {
-            "type": "template-page"
-        }
+  "sections": {
+    "template": {
+      "type": "template-page",
+      "settings": {
+      }
     },
-    "order": ["template"]
+    "31069c8e-f96c-4dce-b37d-2b2cc20ed875": {
+      "type": "contact-form",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "template",
+    "31069c8e-f96c-4dce-b37d-2b2cc20ed875"
+  ]
 }

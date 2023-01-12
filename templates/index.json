@@ -1,13 +1,5 @@
 {
   "sections": {
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Animal Print",
-        "featured_collection": "animal-print",
-        "number_of_products_to_show": 4
-      }
-    },
     "f74bd137-ee09-4c02-bb69-f5ad33fed38e": {
       "type": "featured-collection",
       "settings": {
@@ -15,10 +7,18 @@
         "featured_collection": "bikinis",
         "number_of_products_to_show": 4
       }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Animal Print",
+        "featured_collection": "animal-print",
+        "number_of_products_to_show": 4
+      }
     }
   },
   "order": [
-    "featured-collection",
-    "f74bd137-ee09-4c02-bb69-f5ad33fed38e"
+    "f74bd137-ee09-4c02-bb69-f5ad33fed38e",
+    "featured-collection"
   ]
 }

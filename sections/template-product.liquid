@@ -167,7 +167,6 @@
 
         getSelectedOptions() {
             this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
-            console.log(this.options)
         }
 
         getVariantJSON(){
@@ -183,7 +182,6 @@
 
                 if(findings) return variant;
             })
-            console.log(this.currentVariant);
         }
 
         updateURL(){
@@ -197,7 +195,6 @@
         }
 
         updatePrice(){
-            console.log(`aweno: ${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
             fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
             .then( response => response.text())
             .then( responseText => {

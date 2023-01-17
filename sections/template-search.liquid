@@ -1,0 +1,50 @@
+<div class="container mx-auto">
+    {% paginate search.results by 12 %}
+        <h1 class="text-xl my-4 text-center">
+            Search Results
+        </h1>
+
+        <div class="flex justify-center items-center">
+            <form class="border flex rounded" action="{{ routes.search_url }}" method="get">
+                <input class="px-4 py-2 w-80 border-none" type="search" name="q" placeholder="Search" value="{{ search.terms | escape }}">
+                <button type="submit" class="bg-gray-900 hover:bg-gray-700 text-white border px-4">Search</button>
+            </form>
+        </div>
+        {% if search.performed %}
+            {% if search.results.size > 0 %}
+                <div class="max-w-6xl mx-auto">
+                    <p class="text-gray-500 text-center my-10">
+                        <span class="font-bold">{{ search.results.size }}</span> results for the search term <span class="underline">{{ search.terms | escape }}</span>.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        {% for item in search.results %}
+                            {% case item.object_type %}
+                                {% when 'product' %}
+                                    {% render 'product-card', product: item, show_vendor: section.settings.show_vendor %}
+                                {% else %}
+                            {% endcase %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <div class="text-center my-4">No results found for the search term: <span class="underline">{{ search.terms | escape }}</span>. Try to use a different keyword</div>
+            {% endif %}
+        {% endif %}
+    
+        {% render 'pagination', pagination: paginate %}
+    {% endpaginate %}
+</div>
+
+{% schema %}
+{
+  "name": "Search page",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show Vendor",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

@@ -5,7 +5,7 @@
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             {% for product in section.settings.featured_collection.products limit: section.settings.number_of_products_to_show %}
-                {% render 'product-card', product: product %}
+                {% render 'product-card', product: product, show_vendor: section.settings.show_vendor %}
                 {% else %}
                 {% for product in (1..4) %}
                     {% render 'product-card-placeholder' %}
@@ -38,6 +38,12 @@
       "default": 4,
       "min": 4,
       "max": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show Vendor",
+      "default": false
     }
   ],
   "presets": [

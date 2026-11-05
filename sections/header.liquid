@@ -52,10 +52,10 @@
             <!-- CART BUTTON / ACCOUNT LINKS IF ENABLE -->
             <div class="hidden md:flex items-center justify-end md:flex-1 space-x-5">
                 <button x-on:click="searchBarOpen = true" type="button" class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900" >
-                    {% render: 'icon-search' %}
+                    {% render 'icon-search' %}
                 </button>
                 <a href="{{ routes.cart_url }}" class="whitespace-nowrap text-base text-gray-500 hover:text-gray-900">
-                    {% render: 'icon-shopping-bag' %}
+                    {% render 'icon-shopping-bag' %}
                 </a>
                 {% if shop.customer_accounts_enabled %}
                     {% if customer %}
@@ -159,4 +159,16 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render: 'icon-search' %}"
+  to: "{% render 'icon-search' %}"
+  position: 3736..3762
+- from: "{% render: 'icon-shopping-bag' %}"
+  to: "{% render 'icon-shopping-bag' %}"
+  position: 3928..3960
+{%- endcomment -%}
